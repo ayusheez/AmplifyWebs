@@ -13,10 +13,11 @@ export default function Contact() {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setStatus("sending");
-
-    const serviceID = "service_h4wyhkz";  // Replace with your EmailJS Service ID
-    const templateID = "template_jylj4q9"; // Replace with your EmailJS Template ID
-    const publicKey = "JPXRIIaDzubPnKmxs"; // Replace with your EmailJS Public Key
+    
+    const serviceID = import.meta.env.service_h4wyhkz;
+    const templateID = import.meta.env.template_jylj4q9;
+    const publicKey = import.meta.env.JPXRIIaDzubPnKmxs;
+// Replace with your EmailJS Public Key
 
     const templateParams = {
       from_name: formData.name,
